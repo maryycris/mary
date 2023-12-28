@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(bg.jpg);
+      background-size: 100%;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0));
+      backdrop-filter: blur(2px);
+     -webkit-backdrop-filter: blur(2px);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(193, 187, 187, 0.9);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 30px;
+      color: white;
+      text-shadow: 0 0 .15em #FFF7, 0 0 .15em #24d2e2fd;
+    }
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    .wew:hover{
+    transform: scale(1.05);
+    z-index: 10;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .wews{
+      text-shadow: 0 0 .15em #FFF7, 0 0 .15em #24d2e2fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="loginC">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <input type="submit" class="wew" value="Login">
+    </form>
+    <p class="wews">Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+  </div>
+
+  <div class="container" id="signupContainer" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="signupUsername" placeholder="Username" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="submit" class="wew" value="Sign Up">
+    </form>
+    <p class="wews">Already have an account? <a href="#" id="showLogin">Login</a></p>
+  </div>
+
+  <script src="log.js"></script>
+</body>
+</html>

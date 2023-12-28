@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Number System Converter</title>
+  <link rel="stylesheet" href="num.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+    <br>
+  <input type="text" id="inputValue" class="inpt" oninput="handleInputChange(event)">
+  <select id="fromSystem" class="toggle1" onchange="toggleButtons()">
+    <option value="binary">BIN</option>
+    <option value="decimal">DEC</option>
+    <option value="octal">OCT</option>
+    <option value="hexadecimal">HEX</option>
+  </select>
+  <select class="toggle2" id="toSystem">
+    <option value="binary">BIN</option>
+    <option value="decimal">DEC</option>
+    <option value="octal">OCT</option>
+    <option value="hexadecimal">HEX</option>
+  </select>
+  <div>
+    <button class="backspce" onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
+    <button class="enter" onclick="handleEnter()"><i class="fa-solid fa-circle-arrow-right"></i></button>
+    <button class="clear" onclick="clearInput()"><i class="fa-solid fa-circle-xmark"></i></button>
+    <br>
+      <div class="num">
+    <button class="numlet" onclick="handleButtonClick('0')">0</button>
+    <button class="numlet" onclick="handleButtonClick('1')">1</button>
+    <button class="numlet" onclick="handleButtonClick('2')" disabled>2</button>
+    <button class="numlet" onclick="handleButtonClick('3')" disabled>3</button>
+    <button class="numlet" onclick="handleButtonClick('4')" disabled>4</button>
+    <button class="numlet" onclick="handleButtonClick('5')" disabled>5</button>
+    <button class="numlet" onclick="handleButtonClick('6')" disabled>6</button>
+    <button class="numlet" onclick="handleButtonClick('7')" disabled>7</button>
+    <button class="numlet" onclick="handleButtonClick('8')" disabled>8</button>
+    <button class="numlet" onclick="handleButtonClick('9')" disabled>9</button>
+    <button class="numlet" onclick="handleLetter('A')" disabled>A</button>
+    <button class="numlet" onclick="handleLetter('B')" disabled>B</button>
+    <button class="numlet" onclick="handleLetter('C')" disabled>C</button>
+    <button class="numlet" onclick="handleLetter('D')" disabled>D</button>
+    <button class="numlet" onclick="handleLetter('E')" disabled>E</button>
+    <button class="numlet" onclick="handleLetter('F')" disabled>F</button>
+  </div>
+    <input type="text" id="outputValue" class="res" placeholder="" readonly>
+    <button class="log-out">Quit</button>
+    </div>
+  </div>
+</div>
+  <script src="num.js"></script>
+</body>
+</html>
